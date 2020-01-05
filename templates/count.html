@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Count Success!!</title>
+</head>
+<body>
+    <h4>The Text you ave entered is: <br><br> </h4> {{ text }}
+    <h2><a href="{% url 'home' %}">Homepage</a></h2>
+    <h3>The total number of word is : {{ wordNo }}</h3>
+
+    <h3>Dictionary is : </h3>
+    <br>
+    {% for word, counttotal in sortedtext %}
+    {{ word }} - {{ counttotal }}
+    <br>
+
+    {% endfor %}
+
+</body>
+</html>
